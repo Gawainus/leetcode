@@ -1,8 +1,10 @@
+#define once
+
 #include <vector>
 
 class Solution {
 public:
-    int numIslands(vector<vector<char>>& grid) {
+    int numIslands(std::vector<std::vector<char>>& grid) {
         
         bool isIsland {false};
         int numIslands {0};

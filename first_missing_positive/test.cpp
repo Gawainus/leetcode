@@ -7,16 +7,16 @@
 namespace {
 
 // The fixture for testing class Foo.
-class NumIslandsTest : public ::testing::Test {
+class FirstMissingPositiveTest : public ::testing::Test {
  protected:
   // You can remove any or all of the following functions if its body
   // is empty.
 
-  NumIslandsTest() {
+  FirstMissingPositiveTest() {
      // You can do set-up work for each test here.
   }
 
-  ~NumIslandsTest() override {
+  ~FirstMissingPositiveTest() override {
      // You can do clean-up work that doesn't throw exceptions here.
   }
 
@@ -37,28 +37,21 @@ class NumIslandsTest : public ::testing::Test {
 };
 
 
-TEST_F(NumIslandsTest, Trivial1) {
+TEST_F(FirstMissingPositiveTest, Trivial_1) {
     Solution sln;
-    std::vector<std::vector<char>> test = {{}};
-    int res = sln.numIslands(test);
+    int res;
 
-    EXPECT_EQ(res, 0);
+    std::vector<int> data{1, 2, 0};
+    res = sln.firstMissingPositive(data);
+    EXPECT_EQ(res, 3);
 }
 
-
-TEST_F(NumIslandsTest, Trivia2) {
+TEST_F(FirstMissingPositiveTest, Trivial_2) {
     Solution sln;
-    std::vector<std::vector<char>> test = {{1},{1},{1}};
-    int res = sln.numIslands(test);
+    int res;
 
-    EXPECT_EQ(res, 1);
-}
-
-TEST_F(NumIslandsTest, Test1) {
-    Solution sln;
-    std::vector<std::vector<char>> test = {{1,1,1},{0,1,0},{1,1,1}};
-    int res = sln.numIslands(test);
-
+    std::vector<int> data{0};
+    res = sln.firstMissingPositive(data);
     EXPECT_EQ(res, 1);
 }
 

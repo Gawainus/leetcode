@@ -7,4 +7,6 @@ include_directories($HOME/benchmark/include)
 
 add_executable (number_of_islands test.cpp)
 
-#target_link_libraries (number_of_islands LINK_PUBLIC Hello)
+target_link_libraries (number_of_islands gtest)
+target_link_libraries (number_of_islands benchmark)
+target_link_libraries (number_of_islands pthread)

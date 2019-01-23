@@ -1,6 +1,4 @@
-#need libcurl installed
-in ubuntu:
-sudo apt-get install libcurl4-openssl-dev
+on ubuntu:
 
 cd thirdparty
 git submodule update --init --recursive
@@ -12,7 +10,3 @@ make install
 # AWS Linux
 sudo yum install cmake
 sudo yum install gcc-c++
-sudo yum install openssl-devel
-sudo yum install libcurl-devel
-sudo yum install doxygen
-

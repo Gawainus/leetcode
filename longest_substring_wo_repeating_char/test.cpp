@@ -7,16 +7,16 @@
 namespace {
 
 // The fixture for testing class Foo.
-class NumIslandsTest : public ::testing::Test {
+class LongestSubStringWORepeatingCharTest : public ::testing::Test {
  protected:
   // You can remove any or all of the following functions if its body
   // is empty.
 
-  NumIslandsTest() {
+    LongestSubStringWORepeatingCharTest() {
      // You can do set-up work for each test here.
   }
 
-  ~NumIslandsTest() override {
+  ~LongestSubStringWORepeatingCharTest() override {
      // You can do clean-up work that doesn't throw exceptions here.
   }
 
@@ -37,30 +37,31 @@ class NumIslandsTest : public ::testing::Test {
 };
 
 
-TEST_F(NumIslandsTest, Trivial1) {
+TEST_F(LongestSubStringWORepeatingCharTest, Trivial_1) {
     Solution sln;
-    std::vector<std::vector<char>> test = {{}};
-    int res = sln.numIslands(test);
+    std::string test;
+    int res = sln.lengthOfLongestSubstring(test);
 
     EXPECT_EQ(res, 0);
 }
 
-
-TEST_F(NumIslandsTest, Trivia2) {
+TEST_F(LongestSubStringWORepeatingCharTest, Test_1) {
     Solution sln;
-    std::vector<std::vector<char>> test = {{1},{1},{1}};
-    int res = sln.numIslands(test);
+    std::string test{"pwwkew"};
+    int res = sln.lengthOfLongestSubstring(test);
+
+    EXPECT_EQ(res, 3);
+}
+
+TEST_F(LongestSubStringWORepeatingCharTest, Test_2) {
+    Solution sln;
+    std::string test{" "};
+    int res = sln.lengthOfLongestSubstring(test);
 
     EXPECT_EQ(res, 1);
 }
 
-TEST_F(NumIslandsTest, Test1) {
-    Solution sln;
-    std::vector<std::vector<char>> test = {{1,1,1},{0,1,0},{1,1,1}};
-    int res = sln.numIslands(test);
 
-    EXPECT_EQ(res, 1);
-}
 
 }  // namespace
 
