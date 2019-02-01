@@ -22,6 +22,7 @@ link_directories(thirdparty/lib64)
 
 add_subdirectory(binary_tree_serialization)
 add_subdirectory(first_missing_positive)
+add_subdirectory(integer_partition)
 add_subdirectory(longest_substring_wo_repeating_char)
 add_subdirectory(lru_cache)
-add_subdirectory(number_of_islands)
+add_subdirectory(num_islands)
